@@ -36,6 +36,27 @@ export default [
     ],
   },
   {
+    path: '/demo',
+    name: 'demo',
+    component: Layout,
+    redirect: '/demo/demo_01',
+    meta: { title: '测试页', icon: Edit1Icon },
+    children: [
+      {
+        path: 'demo_01',
+        name: 'ListBase',
+        component: () => import('@/pages/demo/demo_01/index.vue'),
+        meta: { title: 'demo_01' },
+      },
+      {
+        path: 'demo_02',
+        name: 'ListBase',
+        component: () => import('@/pages/demo/demo_02/index.vue'),
+        meta: { title: 'demo_02' },
+      },
+    ],
+  },
+  {
     path: '/form',
     name: 'form',
     component: Layout,
